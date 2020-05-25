@@ -1,0 +1,125 @@
+.login {
+  font-size: 1.8rem;
+  .container {
+    display: flex;
+    width: 1024px;
+    margin: auto;
+    .left {
+      background-color: $green;
+      flex: 1;
+      height: 380px;
+      position: relative;
+
+      h2 {
+        color: $white;
+        text-align: center;
+        margin: 30px 0;
+        font-size: 4rem;
+      }
+      .my_account {
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        margin: 5px auto;
+        line-height: 60px;
+        background-color: $white;
+        text-align: center;
+        width: 300px;
+        input#text {
+          width: 80%;
+          outline: none;
+          border: none;
+          font-size: 16px;
+        }
+        .icon {
+          color: $green;
+          background-color: $white;
+          font-size: 24px;
+        }
+      }
+      .my_password {
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        margin: 5px auto;
+        line-height: 60px;
+        background-color: $white;
+        text-align: center;
+        width: 300px;
+        input#text {
+          width: 80%;
+          outline: none;
+          border: none;
+          font-size: 16px;
+        }
+        .icon {
+          color: $green;
+          background-color: $white;
+          font-size: 24px;
+        }
+      }
+      .checkbox {
+        width: 300px;
+        margin: 0 auto;
+        color: $white;
+        text-align: right;
+        input {
+          float: right;
+        }
+      }
+      .login {
+        background-color: $yellow;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        color: $green;
+        text-align: center;
+        bottom: 0;
+        position: absolute;
+        cursor: pointer;
+        font-size: 2.5rem;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: $light_green;
+      .title {
+        font-size: 3rem;
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
+        padding: 10px;
+      }
+      .platform {
+        background-color: $white;
+        width: 300px;
+        margin: 5px auto;
+        line-height: 60px;
+        height: 60px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            max-width: 100px;
+            color: #3f5d45;
+            opacity: .6;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+      }
+    }
+  }
+}
+
+input[type="checkbox"] {
+  background-color: initial;
+  cursor: default;
+  box-sizing: border-box;
+  margin: 3px 0.5ex;
+  padding: initial;
+  border: initial;
+}

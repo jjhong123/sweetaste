@@ -1,0 +1,40 @@
+/*導覽列*/
+header {
+    font-size: 1.8rem;
+
+    .logo {
+      width: 220px;
+      img {
+        width: 100%;
+      }
+    }
+
+    nav {
+      padding: 30px 42px;
+      width: 1024px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      ul{
+        // background-color: #ccc;
+        display: flex;
+        align-items: center;
+        // flex-direction: row;
+        li{
+          margin: 0px 30px;
+
+          a{
+            transition:border-bottom .3s;
+            text-decoration: none;
+
+            &:hover{
+              border-bottom:2px solid $green;
+            }
+          }
+
+        }
+      }
+      
+    }
+    
+  }

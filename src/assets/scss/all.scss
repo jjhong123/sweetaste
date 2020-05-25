@@ -1,0 +1,81 @@
+@import "./vendor/resetcss";//初始化
+
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+//Utils
+@import "./utils/variables";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "cwTeXYen", sans-serif;
+  font-size: 62.5%;//this defines what 1rem is 
+  color: $green;
+
+  @media only screen and (max-width:720px){
+    font-size: 1.4rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+input,
+select {
+  border-radius: 0px;
+  outline: none;
+  border: none;
+  font-family: "cwTeXYen", sans-serif;
+  font-size: 1.8rem;
+}
+a {
+  text-decoration: none;
+  color: $green;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@import "./components/header";//導覽列
+@import "./components/footer";//底部
+@import "./components/product_card";//卡片
+@import "./components/pagination";//分頁
+@import "./page/home";//首頁
+@import "./page/product";//產品頁
+@import "./page/cart";//購物車
+@import "./page/login";//購物車

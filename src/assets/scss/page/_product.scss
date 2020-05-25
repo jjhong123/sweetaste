@@ -1,0 +1,43 @@
+.product_area{
+    font-size: 1.8rem;
+    .container{
+        width: 1024px;
+        margin: 0 auto;
+        display: flex;
+
+        .left{
+            flex: 1;
+            ul{
+                text-align: center;
+                li{
+                    padding:15px 100px;
+                    
+                    &:hover{
+                        background: #eaf0ed;
+                    }
+        
+                    &.active{
+                        background-color: $green;
+                        color: #fff;
+                    }
+                }
+            }
+        }   
+
+        .right{
+            flex:2;
+            padding: 0 10px;
+            .product_list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            .item{
+                margin: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    
+}

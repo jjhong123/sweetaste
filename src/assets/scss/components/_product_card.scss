@@ -1,0 +1,56 @@
+/*產品*/
+.item {
+  display: flex;
+  flex-direction: column;
+  .img_box {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    img {
+      transition: all 0.3s;
+      width: 100%;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .cate {
+    font-size: 1.6rem;
+    position: absolute;
+    writing-mode: vertical-lr;
+    top: 0;
+    left: 0;
+    letter-spacing: 3px;
+    padding: 8px;
+    background: $green;
+    color: $white;
+    margin-left: 15px;
+  }
+  .item_info {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 1.8rem;
+    .price {
+      font-weight: bold;
+    }
+  }
+  .addcart {
+    cursor: pointer;
+    background: $light_green;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 90px;
+    transition: all 0.3s;
+    &:hover {
+      color: $white;
+      background: $green;
+      a {
+        color: $light_green;
+      }
+    }
+  }
+}

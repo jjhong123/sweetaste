@@ -9,7 +9,7 @@ header {
       }
     }
 
-    nav {
+    .pc_menu{
       padding: 30px 42px;
       width: 1024px;
       margin: auto;
@@ -34,7 +34,31 @@ header {
 
         }
       }
-      
     }
     
+    .mb_menu{
+      display: none;
+    }
+    @include pad{
+      
+      .pc_menu{
+        display: none;
+      }
+
+      .mb_menu{
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 30px;
+        .logo {
+          width: 150px;
+          img {
+            width: 100%;
+          }
+        }
+        ul{
+          display: none;
+        }
+
+      }
+    }
   }

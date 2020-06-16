@@ -1,6 +1,5 @@
 <template>
   <footer>
-<<<<<<< HEAD
     <div class="sub">
       <div class="container">
         <div class="logo">
@@ -39,9 +38,6 @@
         <p>© 2020 Sweetaste* All Rights Reserved</p>
       </div>
     </div>
-=======
-    Footer
->>>>>>> 38d1235b4dd076cbca790256b8abf23e4d4c3746
   </footer>
 </template>
 

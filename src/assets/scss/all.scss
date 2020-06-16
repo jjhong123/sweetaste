@@ -1,5 +1,5 @@
 @import "./vendor/resetcss";//初始化
-
+@import "./utils/mixin";
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 //Utils
 @import "./utils/variables";
@@ -16,7 +16,7 @@
 *::after{
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body,
@@ -79,3 +79,4 @@ li {
 @import "./page/product";//產品頁
 @import "./page/cart";//購物車
 @import "./page/login";//購物車
+// @import "./test.scss";

@@ -25,9 +25,12 @@
         </div>
       </div>
     </div>
+    <div>
+      <img src="../assets/img/sm-為什麼選擇了做甜點.png" class="mb_pic" alt="">
+    </div>
     <!-- Chose -->
     <div class="chose_area">
-      <div class="contain" id="why_1">
+      <div class="contain">
         <div class="pic_1"></div>
         <div class="reason">
           <p>是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
@@ -36,9 +39,10 @@
         </div>
       </div>
     </div>
+    <img src="../assets/img/sm-為什麼一定要吃甜點.png" class="mb_pic" alt="">
     <!-- Chose-2 -->
     <div class="chose_area">
-      <div class="contain" id="why_2">
+      <div class="contain">
         <div class="reason">
           <p>是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
           <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>

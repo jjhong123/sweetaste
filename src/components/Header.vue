@@ -1,5 +1,6 @@
 <template>
   <header>
+<<<<<<< HEAD
     <nav class="pc_menu">
       <div class="logo">
         <a href="index.html"
@@ -24,6 +25,9 @@
         </li>
       </ul>
     </nav>
+=======
+   Header
+>>>>>>> 38d1235b4dd076cbca790256b8abf23e4d4c3746
   </header>
 </template>
 

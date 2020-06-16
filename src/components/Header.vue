@@ -2,24 +2,25 @@
   <header>
     <nav class="pc_menu">
       <div class="logo">
-        <a href="index.html">
-          <img alt="Vue logo" src="../assets/img/logo-all-dark.png" />
-        </a>
+        <a href="index.html"
+          ><img alt="Vue logo" src="../assets/img/logo-all-dark.png"
+        /></a>
       </div>
       <ul>
         <li>
-          <router-link to="/">Home</router-link>
+          <a
+            href="#/"
+            aria-current="page"
+            class="router-link-exact-active router-link-active"
+            >Home</a
+          >
         </li>
+        <li><a href="#/product" class="">甜點</a></li>
+        <li><a href="#/login" class="">登入</a></li>
         <li>
-          <router-link to="/product">甜點</router-link>
-        </li>
-        <li>
-          <router-link to="/login">登入</router-link>
-        </li>
-        <li>
-          <router-link to="/cart">
-            <i class="fas fa-shopping-cart"></i>
-          </router-link>
+          <a href="#/cart" class=""
+            ><i class="fas fa-shopping-cart" aria-hidden="true"></i
+          ></a>
         </li>
       </ul>
     </nav>

@@ -1,43 +1,72 @@
-.product_area{
+.product_area {
     font-size: 1.8rem;
-    .container{
+    .container {
         width: 1024px;
         margin: 0 auto;
         display: flex;
 
-        .left{
+        .left {
             flex: 1;
-            ul{
+            ul {
                 text-align: center;
-                li{
-                    padding:15px 100px;
-                    
-                    &:hover{
+                li {
+                    padding: 15px 100px;
+
+                    &:hover {
                         background: #eaf0ed;
                     }
-        
-                    &.active{
+
+                    &.active {
                         background-color: $green;
                         color: #fff;
                     }
                 }
             }
-        }   
+        }
 
-        .right{
-            flex:2;
+        .right {
+            flex: 2;
             padding: 0 10px;
-            .product_list{
+            .product_list {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
             }
-            .item{
+            .item {
                 margin: 10px;
                 cursor: pointer;
             }
         }
-    }
 
-    
+        @include mobile {
+            width: 100%;
+            flex-direction: column;
+            .left{
+                ul li {
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+            }
+            .right {
+                padding: unset;
+                //卡片客製
+                .item {
+                    margin: 5px 0px;
+                    .img_box P {
+                        font-size: 1rem;
+                    }
+                    .item_info {
+                        font-size: 1rem;
+                    }
+                    a {
+                        padding: 5px 0;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            .pagination{
+                font-size: 1rem;
+            }
+        }
+    }
 }

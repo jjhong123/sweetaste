@@ -34,7 +34,7 @@
         .icon {
           color: $green;
           background-color: $white;
-          font-size: 24px;
+          font-size: 20px;
         }
       }
       .my_password {
@@ -55,7 +55,7 @@
         .icon {
           color: $green;
           background-color: $white;
-          font-size: 24px;
+          font-size: 20px;
         }
       }
       .checkbox {
@@ -112,7 +112,41 @@
         }
       }
     }
+    @include mobile{
+      width: 100%;
+      .left{
+        
+        h2{
+          font-size: 1.4rem;
+          font-weight: unset;
+        }
+        input{
+          font-size: 1rem;
+        }
+        .checkbox{
+          font-size: 1.2rem;
+        }
+        
+      }
+      .right{
+        display: none;
+      }
+    }
+    @include phone{
+      .left{
+        .my_account{
+          font-size: 1rem;
+        }
+        .checkbox{
+          font-size: 1rem;
+        }
+        .login{
+          font-size: 1.4rem;
+        }
+      }
+    }
   }
+  
 }
 
 input[type="checkbox"] {

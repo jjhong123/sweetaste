@@ -1,64 +1,80 @@
 /*導覽列*/
 header {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 
-    .logo {
-      width: 220px;
-      img {
-        width: 100%;
-      }
+  .logo {
+    width: 220px;
+    img {
+      width: 100%;
     }
+  }
 
-    .pc_menu{
-      padding: 30px 42px;
-      width: 1024px;
-      margin: auto;
+  .pc_menu {
+    padding: 30px 42px;
+    width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      // background-color: #ccc;
       display: flex;
-      justify-content: space-between;
-      ul{
-        // background-color: #ccc;
-        display: flex;
-        align-items: center;
-        // flex-direction: row;
-        li{
-          margin: 0px 30px;
+      align-items: center;
+      // flex-direction: row;
+      li {
+        margin: 0px 30px;
 
-          a{
-            transition:border-bottom .3s;
-            text-decoration: none;
+        a {
+          transition: border-bottom 0.3s;
+          text-decoration: none;
 
-            &:hover{
-              border-bottom:2px solid $green;
-            }
-          }
-
-        }
-      }
-    }
-    
-    .mb_menu{
-      display: none;
-    }
-    @include pad{
-      
-      .pc_menu{
-        display: none;
-      }
-
-      .mb_menu{
-        display: flex;
-        justify-content: space-between;
-        padding: 18px 30px;
-        .logo {
-          width: 150px;
-          img {
-            width: 100%;
+          &:hover {
+            border-bottom: 2px solid $green;
           }
         }
-        ul{
-          display: none;
-        }
-
       }
     }
   }
+
+  .mb_menu {
+    display: none;
+  }
+  @include mobile {
+    .pc_menu {
+      display: none;
+    }
+
+    .mb_menu {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 30px;
+      font-size: 1rem;
+      flex-wrap: wrap;
+      i{
+        cursor: pointer;
+      }
+      img {
+        width: 150px;
+      }
+      ul {
+        background: #fff;
+        width: 100%;
+        flex-direction: column;
+        text-align: left;
+        padding: 20px 0;
+        display: block;
+        li {
+          border-bottom: 1px solid #eaf0ed;
+          margin: 0;
+          padding: 10px 0;
+          width: 100%;
+          border-bottom: 1px solid #eaf0ed;
+          transition: all .3s;
+          cursor: pointer;
+          &:hover{
+            box-shadow: 0 3px 0 $green;
+          }
+        }
+      }
+    }
+  }
+}

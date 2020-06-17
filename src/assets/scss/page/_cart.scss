@@ -1,103 +1,169 @@
 .cart {
-  width:1024px;
+  width: 1024px;
   margin: 20px auto 60px auto;
   display: flex;
   align-items: flex-start;
   font-size: 1.8rem;
-}
-.lists {
-  flex: 2;
-  margin-right: 20px;
-  .title {
-    text-align: center;
-    color: $green;
-    background: $light_green;
-    font-size: 2.5rem;
-    padding: 15px 0;
-    margin-bottom: 20px;
-  }
-  table {
-    width: 100%;
-    border-spacing: 20px;
-    border-collapse: collapse; //摺疊邊框
-    tr {
-      height: 130px;
-      i {
-        cursor: pointer;
-      }
-    }
-    td {
+  .lists {
+    flex: 2;
+    margin-right: 20px;
+    .title {
       text-align: center;
-      padding: 0 10px;
-      img {
-        width: 110px;
+      color: $green;
+      background: $light_green;
+      font-size: 2.5rem;
+      padding: 15px 0;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-spacing: 20px;
+      border-collapse: collapse; //摺疊邊框
+      tr {
+        height: 130px;
+        i {
+          cursor: pointer;
+        }
       }
-      &:first-child {
-        text-align: left;
-        padding: 0;
+      td {
+        text-align: center;
+        padding: 0 10px;
+        img {
+          width: 110px;
+        }
+        &:first-child {
+          text-align: left;
+          padding: 0;
+        }
+      }
+      .item_title {
+        font-size: 2.25rem;
+        .price {
+          font-size: 1.8rem;
+        }
+      }
+      .select {
+        * {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+        }
+        input {
+          text-align: center;
+          outline: none;
+          border: 1px solid $light_green;
+          margin: 0 10px;
+          line-height: 50px;
+        }
+        input[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+        span {
+          cursor: pointer;
+          line-height: 50px;
+          text-align: center;
+          border: 1px solid $light_green;
+        }
       }
     }
-    .item_title {
+  }
+  .order_info {
+    flex: 1;
+    color: $light_green;
+    background: $green;
+    h2 {
+      width: 80%;
+      padding: 15px 0;
+      text-align: center;
+      font-weight: normal;
+      margin: 15px auto;
+      border-bottom: 1px solid $light_green;
+    }
+    .price,
+    .fee,
+    .total {
+      display: flex;
+      padding: 10px 15px;
+      letter-spacing: 2px;
+      justify-content: space-between;
+    }
+    .total {
+      font-weight: bold;
       font-size: 2.25rem;
-      .price {
-        font-size: 1.8rem;
-      }
     }
-    .select {
-      * {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-      }
-      input {
-        text-align: center;
-        outline: none;
-        border: 1px solid $light_green;
-        margin: 0 10px;
-        line-height: 50px;
-      }
-      input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-      }
-      span {
-        cursor: pointer;
-        line-height: 50px;
-        text-align: center;
-        border: 1px solid $light_green;
-      }
+    .checkout {
+      cursor: pointer;
+      padding: 15px;
+      background: $yellow;
+      text-align: center;
+      color: $green;
+      font-size: 2.5rem;
     }
   }
-}
-.order_info {
-  flex: 1;
-  color: $light_green;
-  background: $green;
-  h2 {
-    width: 80%;
-    padding: 15px 0;
-    text-align: center;
-    font-weight: normal;
-    margin: 15px auto;
-    border-bottom: 1px solid $light_green;
-  }
-  .price,
-  .fee,
-  .total {
-    display: flex;
-    padding: 10px 15px;
-    letter-spacing: 2px;
-    justify-content: space-between;
-  }
-  .total {
-    font-weight: bold;
-    font-size: 2.25rem;
-  }
-  .checkout {
-    cursor: pointer;
-    padding: 15px;
-    background: $yellow;
-    text-align: center;
-    color: $green;
-    font-size: 2.5rem;
+  @include mobile {
+    flex-direction: column;
+    width: 100%;
+    .lists {
+      width: 100%;
+      .title {
+        font-size: 1.6rem;
+      }
+      table {
+        width: 90%;
+        margin: auto;
+        tr {
+          display: block;
+          height: auto;
+          margin: 15px 0px;
+          td {
+            display: inline-block;
+          }
+        }
+        .item_title p {
+          font-size: 1rem !important;
+        }
+        .select {
+          span {
+            font-size: 1rem;
+          }
+          input {
+            font-size: 1rem;
+          }
+        }
+        .total_price {
+          width: 100%;
+          font-size: 1rem;
+          border-top: 1px solid $light_green;
+          border-bottom: 1px solid $light_green;
+          padding: 10px 0;
+          text-align: right;
+        }
+        .delete {
+          display: none;
+        }
+      }
+    }
+    .order_info {
+      background-color: unset;
+      color: $green;
+      width: 100%;
+      h2 {
+        background-color: $light_green;
+        font-size: 1.3rem;
+      }
+      .price > span {
+        font-size: 1rem;
+      }
+      .fee > span {
+        font-size: 1rem;
+      }
+      .total >span{
+        font-size: 1.3rem;
+      }
+      .checkout {
+        padding: 10px;
+        font-size: 1.6rem;
+      }
+    }
   }
 }

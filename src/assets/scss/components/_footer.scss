@@ -1,41 +1,56 @@
 /*底部*/
 footer {
-    margin-top: 40px;
-    background: $light_green;
-    .sub {
-      background: $green;
-      .container {
-        width: 1024px;
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 30px 0px;
-        font-size: 1.8rem;
+  margin-top: 40px;
+  background: $light_green;
+  .sub {
+    background: $green;
+    .container {
+      width: 1024px;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 30px 0px;
+      font-size: 1.8rem;
+
+      @include mobile {
+        width: 100%;
+        flex-direction: column;
       }
+
       .logo {
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-      p {
-        color: $light_green;
-        font-size: 2.4rem;
-        padding: 0 20px;
-      }
-      img {
-        width: 40px;
+        p {
+          color: $light_green;
+          font-size: 2.4rem;
+          padding: 0 20px;
+          @include mobile {
+            font-size: 1.6rem;
+          }
+          @include phone{
+            font-size: 1rem;
+          }
+        }
       }
     }
+
     .email {
       display: flex;
       align-items: center;
       justify-content: center;
-      .icon i {
+      .icon {
         height: 56px;
         line-height: 56px;
         padding: 6px 20px;
         background: #fff;
+      }
+      .icon i {
+        height: 30px;
+        padding: 6px 3px;
+        background: #fff;
+        font-size: 30px;
       }
       label {
         cursor: pointer;
@@ -52,43 +67,82 @@ footer {
         padding: 6px;
         outline: none;
         border: none;
+
+      }
+      @include mobile{
+        margin:10px 0 ;
+        input{
+          width: 50%;
+          font-size: 1rem;
+        }
+      }
+      
+    }
+
+    img {
+      width: 40px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    width: 1024px;
+    height: 340px;
+    margin: auto;
+    padding: 30px 0;
+
+    .left {
+      flex: 1;
+      height: 100%;
+      justify-content: space-around;
+      display: flex;
+      flex-direction: column;
+      font-size: 2.2rem;
+      .logo {
+        img {
+          width: 170px;
+        }
+      }
+      .icon {
+        img {
+          width: 32px;
+        }
+      }
+     
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      font-size: 1.8rem;
+      img {
+        width: 60px;
+        @include mobile {
+          display: none;
+        }
       }
     }
-    .bottom {
-      display: flex;
-      width: 1024px;
-      height: 340px;
-      margin: auto;
-      padding: 30px 0;
-      .left {
-        flex: 1;
-        height: 100%;
-        justify-content: space-around;
-        display: flex;
-        flex-direction: column;
-        font-size:2.2rem;
-        .logo {
-          img {
-            width: 170px;
-          }
-        }
-        .icon {
-          img {
-            width: 32px;
-          }
+
+     // 行動版
+     @include mobile {
+      display: block;
+      padding: 10px 20px;
+      width: 100%;
+      height: auto;
+      font-size: 1.2rem;
+      .left .info {
+        font-size: 2rem;
+        p{
+          font-size: 1rem;
         }
       }
       .right {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: space-between;
-        font-size:1.8rem;
-        img {
-          width: 60px;
-        }
+        font-size: 1rem;
+        display: inline-block;
       }
     }
+    
   }
-  
+}

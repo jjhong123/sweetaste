@@ -62,7 +62,8 @@ header {
         flex-direction: column;
         text-align: left;
         padding: 20px 0;
-        display: block;
+        // display: block;
+        display: none;
         li {
           border-bottom: 1px solid #eaf0ed;
           margin: 0;
